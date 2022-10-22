@@ -21,7 +21,7 @@ jobs:
         run: vercel pull --yes -- environment=production --token=${{ secrets.VERCEL_TOKEN }}
       
       - name: Estagio 4 - Construir o projeto 
-        run: vercel build -- prod -- token=${{ secrets.TESTE }}    
+        run: vercel build -- prod -- token=${{ secrets.VERCEL_TOKEN }}    
         
       - name: Estagio 5 - Enviar o Projeto para o Vercel 
         run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
